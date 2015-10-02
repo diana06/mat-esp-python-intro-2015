@@ -5,14 +5,14 @@ print("lista original", lista) #imprimir a lista fora de ordem
 N = 20 # variavel com o numero de termos na lista
 T = 0 # variavel que sera utilizada para realizar a troca dos termos
 count_troca = 0 # contador para as figuras de acordo com a ocorrencia das trocas
-count_it 0 # contador para as figuras de acordo com a ocorrencia das interacoes
+count_it = 0 # contador para as figuras de acordo com a ocorrencia das interacoes
 
-import matplotlib.pyplot as plt #importar o módulo matplotlib
+import matplotlib.pyplot as plt #importar o modulo matplotlib
 
 plt.figure() #criar figura em branco
 plt.plot(range(0, N, 1), lista,'ok') #preencher com os dados primarios
 plt.title("Original") #dar nome ao titulo
-plt.xlabel("Posição") #nomear o eixo x
+plt.xlabel("Posicao") #nomear o eixo x
 plt.ylabel("Valor") #nomear o eixo y
 plt.savefig("fig/bubble-inicio.png") #salvar figura na pasta fig
 plt.close #fechar figura
@@ -29,13 +29,13 @@ for i in range(0, N, 1): #o programa vai rodar todos os valores
         plt.plot(i, lista[i],'or') #preencher com os dados primarios
         plt.plot(j, lista[j],'ob') #preencher com os dados primarios
         count_it = count_it+1 #aumentar o contador da interacao
-        plt.title("Interação {}".format(count_it)) #dar nome ao titulo
-        plt.xlabel("Posição") #nomear o eixo x
+        plt.title("Interacao {}".format(count_it)) #dar nome ao titulo
+        plt.xlabel("Posicao") #nomear o eixo x
         plt.ylabel("Valor") #nomear o eixo y
         plt.savefig("fig/bubble-it-{}.png".format(count_it)) #salvar figura na pasta fig
         plt.close #fechar figura
 
-        if lista[i] > lista[j]: # cada termo e comparado com o termo a seguir e, caso seja maior, o comando é executado
+        if lista[i] > lista[j]: # cada termo e comparado com o termo a seguir e, caso seja maior, o comando e executado
             T = lista[i] # a troca comecou
             lista[i] = lista[j] # durante a troca
             lista[j] = T # a troca finalizou
@@ -44,7 +44,7 @@ for i in range(0, N, 1): #o programa vai rodar todos os valores
             plt.plot(range(0, N, 1), lista,'ok') #preencher com os dados primarios
             count_troca = count_troca+1 #aumentar o contador da troca
             plt.title("Troca {}".format(count_troca)) #dar nome ao titulo
-            plt.xlabel("Posição") #nomear o eixo x
+            plt.xlabel("Posicao") #nomear o eixo x
             plt.ylabel("Valor") #nomear o eixo y
             plt.savefig("fig/bubble-troca-{}.png".format(count_troca)) #salvar figura na pasta fig
             plt.close #fechar figura
@@ -55,9 +55,9 @@ print("lista crescente") # mostrou os valores em ordem crescente
 plt.figure() #criar figura em branco
 plt.plot(range(0, N, 1), lista,'ok') #preencher com os dados primarios
 plt.title("Crescente") #dar nome ao titulo
-plt.xlabel("Posição") #nomear o eixo x
+plt.xlabel("Posicao") #nomear o eixo x
 plt.ylabel("Valor") #nomear o eixo y
-plt.savefig("fig/bubble-inicio.png") #salvar figura na pasta fig
+plt.savefig("fig/bubble-fim.png") #salvar figura na pasta fig
 plt.close #fechar figura
 
 print("Lista dos 5 maiores valores", lista[15:21:1]) # mostrou os 5 maiores valores
